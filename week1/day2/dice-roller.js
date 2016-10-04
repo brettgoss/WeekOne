@@ -3,12 +3,11 @@ diceRoll(myArg);
 
 
 function diceRoll(numDice) {
-
+  var message = [];
   for (var i = 0; i < numDice; i++) {
 
     var diceMath = Math.floor((Math.random() * 6) + 1);
-    var result = diceMath;
-   console.log(result);
-
-  }
+    message.push(diceMath);
+      }
+  console.log("Rolled " + numDice + " dice: " + message.join(", "));
 }
