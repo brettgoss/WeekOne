@@ -1,3 +1,7 @@
+/**
+ * Rolls a number of dice.
+ * @author Brett Goss
+ */
 var myArg = process.argv.slice(2);
 diceRoll(myArg);
 
