@@ -1,42 +1,27 @@
+
 var userInput = process.argv.splice(2).join('');
 
-countLetters(userInput);
+countPosition(userInput);
 
-function countLetters(input){
+function countPosition(input) {
 
-  var charCount = {
-
-  };
-  //var index = 0;
+  var charCount = {};
   var stringPos = 0;
-  for (var key of userInput) {
-
-
+  for (var key of input) {
 
     if (!charCount[key]) {
       charCount[key] = (newObj = {});
-      var occ = stringPos;
-        newObj.instances = 1;
-        //newObj.indexPos = index;
-        newObj.inst = newObj.occ;
+      newObj["Instance 1"] = "Position " + stringPos;
+
     } else {
-      newObj.occurances += 1;
+      var prevObj = charCount[key];
+      var size = Object.keys(prevObj).length;
+      prevObj[("Instance "+ (size+1))] = "Position " + stringPos;
+
     }
-
-stringPos++;
-
+    stringPos++;
   }
-  //for (key in charCount) {
-  //   var value = charCount[key];
-  //   console.log(value);
-  // }
-  //console.log(newObj);
   console.log(charCount);
 }
-
-
-
-
-
 
 
