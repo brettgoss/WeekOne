@@ -30,7 +30,18 @@ var library = {
 // p02: Other Playlist - 1 tracks
 
 var printPlaylists = function () {
-
+ var pId = library.playlists;
+ for (var key in pId) {
+    var result = (
+      pId[key].id
+      + ': '
+      + pId[key].name
+      + ' - '
+      + pId[key].tracks.length
+      + ' tracks'
+    );
+    console.log(result);
+  }
 }
 
 
@@ -40,7 +51,20 @@ var printPlaylists = function () {
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 
 var printTracks = function () {
-
+  var pId = library.tracks;
+  for (var key in pId) {
+    var result = (
+      pId.id
+      + ': '
+      + pId.id.name
+      + ' by '
+      + pId[key].artist
+      + ' ('
+      + pId[key].album
+      + ')'
+    );
+    console.log(result);
+}
 }
 
 
@@ -50,6 +74,26 @@ var printTracks = function () {
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 
 var printPlaylist = function (playlistId) {
+  var pId = library.playlists[playlistId];
+  var tId = library.tracks;
+  var pTracks = pId.tracks;
+  // console.log(tId);
+  var resultP = (
+    pId.id
+    + ': '
+    + pId.name
+    + ' - '
+    + pId.tracks.length
+    + ' tracks');
+  console.log(pTracks);
+
+  var resultT = (
+    tId.pTracks)
+
+
+
+
+  console.log(resultT);
 
 }
 
@@ -86,9 +130,15 @@ var addPlaylist = function (name) {
 // STRETCH:
 // given a query string string, prints a list of tracks
 // where the name, artist or album contains the query string (case insensitive)
-// tip: use "string".search("tri") 
+// tip: use "string".search("tri")
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 
 var printSearchResults = function(query) {
 
 }
+
+printPlaylist('p01');
+// printTracks();
+
+
+
