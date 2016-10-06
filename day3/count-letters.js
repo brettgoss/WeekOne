@@ -4,9 +4,7 @@ countLetters(userInput);
 
 function countLetters(input){
 
-  var charCount = {
-
-  };
+  var charCount = {};
 
   for (var key of userInput) {
 

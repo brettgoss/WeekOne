@@ -1,13 +1,12 @@
 
 var userInput = process.argv.splice(2).join('');
 
-countPosition(userInput);
 
 function countPosition(input) {
 
   var charCount = {};
   var stringPos = 0;
-  for (var key of input) {
+  for (var key in input) {
 
     if (!charCount[key]) {
       charCount[key] = (newObj = {});
@@ -25,3 +24,4 @@ function countPosition(input) {
 }
 
 
+countPosition(userInput);
