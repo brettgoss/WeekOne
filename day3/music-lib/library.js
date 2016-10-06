@@ -87,6 +87,9 @@ var printPlaylist = function (playlistId) {
     + ' tracks');
   console.log(pTracks);
 
+  forEach(function(tId){
+
+  })
   var resultT = (
     tId.pTracks)
 
