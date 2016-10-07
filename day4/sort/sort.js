@@ -14,7 +14,7 @@ var arraySort = function(arr){
     if(a.age < b.age) {
       return 1;
     }
-      return 0;
+    return 0;
   })
 return result;
 }

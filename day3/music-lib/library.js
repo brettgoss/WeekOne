@@ -77,7 +77,7 @@ var printPlaylist = function (playlistId) {
   var pId = library.playlists[playlistId];
   var tId = library.tracks;
   var pTracks = pId.tracks;
-  // console.log(tId);
+  //console.log(tId);
   var resultP = (
     pId.id
     + ': '
@@ -87,16 +87,16 @@ var printPlaylist = function (playlistId) {
     + ' tracks');
   console.log(pTracks);
 
-  forEach(function(tId){
+  pTracks.forEach(function(){
 
-  })
-  var resultT = (
-    tId.pTracks)
-
-
+  // })
+  // var resultT = (
+  //   tId.pTracks)
 
 
-  console.log(resultT);
+});
+
+  console.log(resultP);
 
 }
 

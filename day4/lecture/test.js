@@ -1,25 +1,13 @@
 
+function funcName(parameter) {
+  return parameter;
+};
 
 
-
- var add = function() {
-    console.log("add stuff");
-}
-
-
-var newFuncOne = function() {
-  add();
-  console.log("funcOne");
-}
-
-
-var newFuncTwo = function() {
-  add();
-  console.log("poop");
-}
-
-
-
-newFuncOne();
-newFuncTwo();
-
+console.log(funcName("First"));
+console.log(funcName("Second"));
+console.log(funcName("Third"));
+console.log(funcName("Fourth"));
+console.log(funcName("Fifth"));
+console.log(funcName("Sixth"));
+console.log(funcName("Seventh"));

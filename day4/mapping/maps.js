@@ -5,7 +5,6 @@ var input = [
 ];
 
 var result = input.map(function(key){
-  var obj = {};
   z = Math.pow(key.x, 2) + Math.pow(key.y, 2);
   return Math.sqrt(z);
 });
