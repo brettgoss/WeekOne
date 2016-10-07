@@ -25,6 +25,7 @@
 *.log
 *.sql
 *.sqlite
+node_modules
 
 # OS generated files #
 ######################
