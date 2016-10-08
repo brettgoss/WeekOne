@@ -6,7 +6,7 @@ function countPosition(input) {
 
   var charCount = {};
   var stringPos = 0;
-  for (var key in input) {
+  for (var key of input) {
 
     if (!charCount[key]) {
       charCount[key] = (newObj = {});

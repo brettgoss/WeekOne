@@ -140,7 +140,7 @@ var printSearchResults = function(query) {
 
 }
 
-printPlaylist('p01');
+printPlaylists();
 // printTracks();
 
 
