@@ -1,3 +1,8 @@
+var arg = process.argv[2]
+var param1 = process.argv[3]
+var param2 = process.argv[4]
+
+
 var library = {
   tracks: { t01: { id: "t01",
                    name: "Code Monkey",
@@ -51,20 +56,20 @@ var printPlaylists = function () {
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 
 var printTracks = function () {
-  var pId = library.tracks;
-  for (var key in pId) {
+  var tId = library.tracks;
+  for (var key in tId) {
     var result = (
-      pId.id
+      tId[key].id
       + ': '
-      + pId.id.name
+      + tId[key].name
       + ' by '
-      + pId[key].artist
+      + tId[key].artist
       + ' ('
-      + pId[key].album
+      + tId[key].album
       + ')'
     );
     console.log(result);
-}
+  }
 }
 
 
@@ -77,7 +82,6 @@ var printPlaylist = function (playlistId) {
   var pId = library.playlists[playlistId];
   var tId = library.tracks;
   var pTracks = pId.tracks;
-  //console.log(tId);
   var resultP = (
     pId.id
     + ': '
@@ -85,19 +89,14 @@ var printPlaylist = function (playlistId) {
     + ' - '
     + pId.tracks.length
     + ' tracks');
-  console.log(pTracks);
-
-  pTracks.forEach(function(){
-
-  // })
-  // var resultT = (
-  //   tId.pTracks)
-
-
-});
 
   console.log(resultP);
 
+  for(var i = 0; i < pTracks.length; i++){
+    var track = tId[pTracks[i]]
+    var result = (`${track.id}: ${track.name} by ${track.artist} (${track.album})`)
+    console.log(result)
+  }
 }
 
 
@@ -140,8 +139,19 @@ var printSearchResults = function(query) {
 
 }
 
-printPlaylists();
-// printTracks();
-
-
-
+switch(arg){
+  case 'allPlaylists':
+    printPlaylists()
+    break;
+  case 'allTracks':
+    printTracks()
+    break;
+  case 'playlist':
+    printPlaylist(param1)
+    break;
+  case 'addtoplaylist':
+    addTrackToPlaylist(param1, param2)
+    break;
+  default:
+    console.log('Please specify a function.')
+  }
